@@ -1,6 +1,6 @@
-/* =========================================
+/* 
    1. VARIABLES GLOBALES (PALETA DE COLORES)
-   ========================================= */
+*/
 :root {
     --header-bg: #2b1e1e;
     /* Café oscuro para el encabezado y footer */
@@ -18,9 +18,9 @@
     /* Color del texto principal */
 }
 
-/* =========================================
+/* 
    2. REINICIO GENERAL Y ESTILOS BASE
-   ========================================= */
+*/
 * {
     box-sizing: border-box;
     /* Incluye padding y border en el ancho total de los elementos */
@@ -34,9 +34,9 @@ body {
     color: var(--text-dark);
 }
 
-/* =========================================
+/* 
    3. ENCABEZADO Y BARRA DE BÚSQUEDA
-   ========================================= */
+*/
 .top-header {
     background-color: var(--header-bg);
     color: white;
@@ -117,9 +117,9 @@ body {
     object-fit: contain;
 }
 
-/* =========================================
+/* 
    4. NAVEGACIÓN PRINCIPAL
-   ========================================= */
+*/
 .main-nav {
     background-color: var(--nav-bg);
 }
@@ -141,9 +141,9 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* =========================================
+/* 
    5. SECCIÓN PORTADA (HERO)
-   ========================================= */
+*/
 .hero {
     /* Superpone un filtro oscuro sobre el color de fondo para mejorar la legibilidad */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #523939;
@@ -157,9 +157,9 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================================
+/*
    6. SECCIÓN DE CATÁLOGO Y TARJETAS
-   ========================================= */
+*/
 .catalog-container {
     padding: 40px 5%;
     text-align: center;
@@ -243,9 +243,9 @@ body {
     background-color: #292424;
 }
 
-/* =========================================
+/*
    7. COMPONENTE CARRUSEL (SLIDER DE IMÁGENES)
-   ========================================= */
+*/
 .carousel-container {
     position: relative;
     width: 100%;
@@ -293,9 +293,9 @@ body {
     right: 8px;
 }
 
-/* =========================================
+/* 
    8. FORMULARIO DE CONTACTO
-   ========================================= */
+*/
 .contact-section {
     max-width: 500px;
     margin: 40px auto;
@@ -315,12 +315,9 @@ body {
     border-radius: 6px;
 }
 
-/* =========================================
+/*
    9. VENTANA EMERGENTE (MODAL CARRITO)
-   ========================================= */
-/* =========================================
-   9. VENTANA EMERGENTE (MODAL CARRITO)
-   ========================================= */
+*/
 .modal {
     display: none;
     position: fixed;
@@ -351,9 +348,9 @@ body {
     cursor: pointer;
 }
 
-/* =========================================
+/* 
    10. PIE DE PÁGINA (FOOTER)
-   ========================================= */
+*/
 footer {
     background-color: var(--header-bg);
     color: white;
@@ -362,9 +359,9 @@ footer {
     margin-top: 40px;
 }
 
-/* =========================================
+/* 
    11. DISEÑO RESPONSIVO (MEDIA QUERIES)
-   ========================================= */
+*/
 
 /* Tablets y pantallas medianas (hasta 992px) */
 @media (max-width: 992px) {
