@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica de codificación y compatibilidad -->
+    <meta charset="UTF-8">
+    <!-- Garantiza que la página sea adaptable (responsive) a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CraftBloom - Flores & Detalles Artesanales</title>
+
+    <!-- Vinculación de la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ícono que aparece en la pestaña del navegador -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Encabezado principal de la página -->
+    <header class="top-header">
+
+        <!-- 1. Marca / Logotipo del sitio -->
+        <div class="logo">
+            CraftBloom
+            <img src="img/logo.png" alt="Logo CraftBloom" class="icon-logo">
+        </div>
+
+        <!-- Barra de búsqueda dinámica -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar ramo, florero o detalle...">
+            <!-- 2. Botón de búsqueda -->
+            <button id="searchBtn">
+                <img src="img/search.jpg" alt="Buscar" class="icon-search">
+            </button>
+        </div>
+
+        <!-- Acciones del usuario (carrito de compras) -->
+        <div class="header-actions">
+            <!-- 3. Botón para abrir el modal del carrito -->
+            <button id="cartBtn" class="cart-btn">
+                <img src="img/cart.png" alt="Carrito" class="icon-cart">
+                <!-- Contador dinámico de productos que se actualiza con JavaScript -->
+                <span>Carrito (<span id="cartCount">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú de navegación principal con enlaces de ancla internos -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal / Portada (Hero Section) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>DETALLES HECHOS A MANO</h1>
+            <p>Flores eternas, ramos creativos y decoración personalizada.</p>
+            <br>
+            <!-- Botón de llamada a la acción hacia el catálogo -->
+            <a href="#productos" class="btn-primary">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Contenedor principal de catálogo de productos -->
+    <main id="productos" class="catalog-container">
+        <h2>Colección Artesanal</h2>
+        <!-- Contenedor vacío donde JavaScript renderizará las tarjetas de productos -->
+        <div id="productGrid" class="product-grid"></div>
+    </main>
+
+    <!-- Sección de formulario de contacto y solicitudes -->
+    <section id="contacto" class="contact-section">
+        <h2>Encargos Especiales & Contacto</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo Electrónico" required>
+            <textarea placeholder="Describe el detalle o arreglo que necesitas..." rows="4" required></textarea>
+            <button type="submit" class="btn-primary">Enviar Solicitud</button>
+        </form>
+    </section>
+
+    <!-- Ventana emergente (Modal) para el Carrito de Compras -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <!-- Botón para cerrar la ventana emergente -->
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Tu Pedido</h2>
+
+            <!-- Contenedor donde JavaScript listará los productos agregados -->
+            <div id="cartItems"></div>
+
+            <!-- Visualización del precio total -->
+            <div class="cart-total">
+                <strong>Total: </strong>$<span id="totalPrice">0</span>
+            </div>
+            <br>
+            <button id="checkoutBtn" class="btn-primary">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Pie de página con derechos de autor e información general -->
+    <footer>
+        <p>&copy; 2026 CraftBloom - Proyecto Académico Web Front-End</p>
+    </footer>
+
+    <!-- Vinculación del script externo de JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

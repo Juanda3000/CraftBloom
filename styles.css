@@ -1,0 +1,453 @@
+/* =========================================
+   1. VARIABLES GLOBALES (PALETA DE COLORES)
+   ========================================= */
+:root {
+    --header-bg: #2b1e1e;
+    /* Café oscuro para el encabezado y footer */
+    --nav-bg: #3d2b2b;
+    /* Café intermedio para la barra de navegación */
+    --accent: #d96b82;
+    /* Rosa de acento para botones primarios y etiquetas */
+    --accent-gold: #e5a93c;
+    /* Dorado para etiquetas de productos populares */
+    --badge-green: #52a488;
+    /* Verde para etiquetas de descuento */
+    --bg-light: #fdfbfb;
+    /* Blanco hueso para el fondo del sitio */
+    --text-dark: #332d2d;
+    /* Color del texto principal */
+}
+
+/* =========================================
+   2. REINICIO GENERAL Y ESTILOS BASE
+   ========================================= */
+* {
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total de los elementos */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* =========================================
+   3. ENCABEZADO Y BARRA DE BÚSQUEDA
+   ========================================= */
+.top-header {
+    background-color: var(--header-bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+/* Marca / Logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.icon-logo {
+    height: 4.6rem;
+    width: auto;
+    object-fit: contain;
+    /* Mantiene la proporción de la imagen sin deformarla */
+}
+
+/* Barra de Búsqueda */
+.search-bar {
+    display: flex;
+    width: 40%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    /* Redondea solo los esquinas izquierdas */
+    outline: none;
+}
+
+.search-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: var(--nav-bg);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+    /* Redondea solo las esquinas derechas */
+}
+
+.icon-search {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Botón del Carrito */
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.icon-cart {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* =========================================
+   4. NAVEGACIÓN PRINCIPAL
+   ========================================= */
+.main-nav {
+    background-color: var(--nav-bg);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   5. SECCIÓN PORTADA (HERO)
+   ========================================= */
+.hero {
+    /* Superpone un filtro oscuro sobre el color de fondo para mejorar la legibilidad */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #523939;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   6. SECCIÓN DE CATÁLOGO Y TARJETAS
+   ========================================= */
+.catalog-container {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+/* Cuadrícula adaptativa para tarjetas de producto */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Tarjeta individual de producto */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Etiquetas flotantes sobre la imagen */
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 10;
+    /* Posiciona la etiqueta por encima del carrusel */
+}
+
+.badge-new {
+    background-color: var(--accent);
+}
+
+.badge-hot {
+    background-color: var(--accent-gold);
+}
+
+.badge-sale {
+    background-color: var(--badge-green);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--header-bg);
+    font-size: 1.15rem;
+    margin: 10px 0;
+}
+
+/* Botones genéricos de acción */
+.btn-primary {
+    background-color: #130e0e;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #292424;
+}
+
+/* =========================================
+   7. COMPONENTE CARRUSEL (SLIDER DE IMÁGENES)
+   ========================================= */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 12px;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+
+/* Botones flotantes del carrusel */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background-color: var(--accent);
+}
+
+.prev-btn {
+    left: 8px;
+}
+
+.next-btn {
+    right: 8px;
+}
+
+/* =========================================
+   8. FORMULARIO DE CONTACTO
+   ========================================= */
+.contact-section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* =========================================
+   9. VENTANA EMERGENTE (MODAL CARRITO)
+   ========================================= */
+.modal {
+    display: none;
+    /* Oculto por defecto; se activa con JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   10. PIE DE PÁGINA (FOOTER)
+   ========================================= */
+footer {
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================================
+   11. DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ========================================= */
+
+/* Tablets y pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
+    .top-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+}
+
+/* Smartphones horizontales y pequeñas tablets (hasta 768px) */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    /* Reorganiza los elementos del encabezado mediante flex-order */
+    .search-bar {
+        width: 100%;
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .header-actions {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Navegación vertical para pantallas reducidas */
+    .main-nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .catalog-container {
+        padding: 30px 20px;
+    }
+
+    .contact-section {
+        margin: 20px auto;
+        width: 90%;
+    }
+}
+
+/* Smartphones pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .icon-logo {
+        height: 3.5rem;
+    }
+
+    /* Fuerza el catálogo a una sola columna */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cart-btn {
+        font-size: 0.9rem;
+    }
+}
