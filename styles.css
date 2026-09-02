@@ -318,9 +318,11 @@ body {
 /* =========================================
    9. VENTANA EMERGENTE (MODAL CARRITO)
    ========================================= */
+/* =========================================
+   9. VENTANA EMERGENTE (MODAL CARRITO)
+   ========================================= */
 .modal {
     display: none;
-    /* Oculto por defecto; se activa con JavaScript */
     position: fixed;
     top: 0;
     left: 0;
@@ -329,6 +331,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 1000; /* Asegura que el modal esté por encima de todo el contenido */
 }
 
 .modal-content {
