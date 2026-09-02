@@ -4,14 +4,14 @@
 const productos = [
     { id: 1, titulo: "Tulipán Eterno", precio: 15000, badge: "NUEVO", tipoBadge: "badge-new", imagenes: ["img/tulipanes.jfif", "img/tulipanes1.jfif"], imgIndex: 0 },
     { id: 2, titulo: "Ramo de Girasoles Eternos", precio: 60000, badge: "MÁS VENDIDO", tipoBadge: "badge-hot", imagenes: ["img/girasoles.jfif", "img/girasoles1.jfif"], imgIndex: 0 },
-    { id: 3, titulo: "Lirio Eterno", precio: 55000, badge: "-15%", tipoBadge: "badge-sale", imagenes: ["img/lirio.png", "img/lirio1.png"], imgIndex: 0 },
+    { id: 3, titulo: "Lirio Eterno", precio: 60000, badge: "-15%", tipoBadge: "badge-sale", imagenes: ["img/lirio.png", "img/lirio1.png"], imgIndex: 0 },
     { id: 4, titulo: "Margaritas Eternas", precio: 65000, badge: "NUEVO", tipoBadge: "badge-new", imagenes: ["img/margaritas.jfif", "img/margaritas1.jfif"], imgIndex: 0 },
-    { id: 5, titulo: "Rosas Eternas", precio: 58000, badge: "POPULAR", tipoBadge: "badge-hot", imagenes: ["img/rosas.jfif", "img/rosas1.jfif"], imgIndex: 0 },
+    { id: 5, titulo: "Rosas Eternas", precio: 68000, badge: "POPULAR", tipoBadge: "badge-hot", imagenes: ["img/rosas.jfif", "img/rosas1.jfif"], imgIndex: 0 },
     { id: 6, titulo: "Flor de Arándanos Eterna", precio: 30000, badge: "OFERTA", tipoBadge: "badge-sale", imagenes: ["img/arandanos.jfif", "img/arandanos1.jfif"], imgIndex: 0 },
     { id: 7, titulo: "Eucalipto Eterno", precio: 40000, badge: "MÁS VENDIDO", tipoBadge: "badge-hot", imagenes: ["img/eucalipto.jfif", "img/eucalipto1.jfif"], imgIndex: 0 },
     { id: 8, titulo: "Dalia Eterna", precio: 120000, badge: "NUEVO", tipoBadge: "badge-new", imagenes: ["img/dahlia.jfif", "img/dahlia1.jfif"], imgIndex: 0 },
     { id: 9, titulo: "Flor de Lavanda Eterna", precio: 55000, badge: "LIMITADA", tipoBadge: "badge-hot", imagenes: ["img/lavanda.jfif", "img/lavanda1.jfif"], imgIndex: 0 },
-    { id: 10, titulo: "Lirio de Coral Eterno", precio: 55000, badge: "ESPECIAL", tipoBadge: "badge-sale", imagenes: ["img/lirioc.jfif", "img/lirioc1.jfif"], imgIndex: 0 },
+    { id: 10, titulo: "Lirio de Coral Eterno", precio: 65000, badge: "ESPECIAL", tipoBadge: "badge-sale", imagenes: ["img/lirioc.jfif", "img/lirioc1.jfif"], imgIndex: 0 },
     { id: 11, titulo: "Magnolia de Coral Eterna", precio: 65000, badge: "POPULAR", tipoBadge: "badge-hot", imagenes: ["img/magnoliac.jfif", "img/magnoliac1.jfif"], imgIndex: 0 },
     { id: 12, titulo: "Hortensia Eterna", precio: 48000, badge: "OFERTA", tipoBadge: "badge-sale", imagenes: ["img/hortencias1.jfif", "img/hortencias.jfif"], imgIndex: 0 }
 ];
