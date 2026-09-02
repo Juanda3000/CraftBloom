@@ -21,7 +21,6 @@ let carrito = [];
 
 
 //2. REFERENCIAS A ELEMENTOS DEL DOM
-
 const productGrid = document.getElementById('productGrid');
 
 const searchInput = document.getElementById('searchInput');
