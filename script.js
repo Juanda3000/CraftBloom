@@ -217,7 +217,6 @@ function agregarAlCarrito(id) {
 
 
 function actualizarCarrito() {
-
     // Actualiza la cantidad total de productos en el encabezado
     cartCount.innerText = carrito.length;
 
@@ -226,10 +225,8 @@ function actualizarCarrito() {
 
     let total = 0;
 
-
     // Si el carrito esta sin nada se muestra un mensaje informativo
     if (carrito.length === 0) {
-
         cartItemsContainer.innerHTML = `
             <p style="text-align: center; padding: 15px;">
                 Tu carrito está vacío.
@@ -237,37 +234,46 @@ function actualizarCarrito() {
         `;
     }
 
-
-    // Recorre todos los productos agregados al carrito
-    carrito.forEach((prod) => {
-
+    // Recorre todos los productos agregados al carrito (Añadimos 'index' para saber cuál borrar)
+    carrito.forEach((prod, index) => {
         // Acumula el precio total
         total += prod.precio;
 
         // Crea un elemento visual para cada producto
         const item = document.createElement('div');
 
-        // Estilos basicos para organizar nombre y precio
+        // Estilos basicos para organizar nombre, precio y botón
         item.style.display = 'flex';
         item.style.justifyContent = 'space-between';
+        item.style.alignItems = 'center'; // Centra los elementos verticalmente
         item.style.marginBottom = '10px';
+        item.style.borderBottom = '1px solid #eee'; // Línea separadora sutil
+        item.style.paddingBottom = '8px';
 
+        // Estructura del item, incluyendo el botón de eliminar
         item.innerHTML = `
-            <span>${prod.titulo}</span>
-
-            <strong>
+            <span style="flex: 1; text-align: left;">${prod.titulo}</span>
+            <strong style="margin-right: 15px;">
                 $${prod.precio.toLocaleString('es-CO')}
             </strong>
+            <button onclick="eliminarDelCarrito(${index})" class="btn-delete" title="Quitar producto">✖</button>
         `;
 
         // Inserta el producto dentro del modal
         cartItemsContainer.appendChild(item);
     });
 
-
     // Muestra el precio total utilizando formato colombiano
-    totalPriceElement.innerText =
-        total.toLocaleString('es-CO');
+    totalPriceElement.innerText = total.toLocaleString('es-CO');
+}
+
+// NUEVA FUNCIÓN: Elimina un producto específico usando su posición (index) en el arreglo
+function eliminarDelCarrito(index) {
+    // splice elimina 1 elemento en la posición indicada ('index')
+    carrito.splice(index, 1);
+    
+    // Volvemos a actualizar la interfaz del carrito
+    actualizarCarrito();
 }
 
 
